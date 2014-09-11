@@ -21,6 +21,11 @@
 		277F73B019C135C700699C5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277F739219C135C700699C5E /* UIKit.framework */; };
 		277F73B819C135C700699C5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 277F73B619C135C700699C5E /* InfoPlist.strings */; };
 		277F73BA19C135C700699C5E /* MutipleImagePickerDMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F73B919C135C700699C5E /* MutipleImagePickerDMTests.m */; };
+		277F73CD19C1365500699C5E /* IFImageCollecionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F73C519C1365500699C5E /* IFImageCollecionViewController.m */; };
+		277F73CE19C1365500699C5E /* IFImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F73C719C1365500699C5E /* IFImageCollectionCell.m */; };
+		277F73CF19C1365500699C5E /* IFImageGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F73C919C1365500699C5E /* IFImageGroupsViewController.m */; };
+		277F73D019C1365500699C5E /* icon_photo_able@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 277F73CB19C1365500699C5E /* icon_photo_able@2x.png */; };
+		277F73D119C1365500699C5E /* icon_photo_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 277F73CC19C1365500699C5E /* icon_photo_add@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,14 @@
 		277F73B519C135C700699C5E /* MutipleImagePickerDMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MutipleImagePickerDMTests-Info.plist"; sourceTree = "<group>"; };
 		277F73B719C135C700699C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		277F73B919C135C700699C5E /* MutipleImagePickerDMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutipleImagePickerDMTests.m; sourceTree = "<group>"; };
+		277F73C419C1365500699C5E /* IFImageCollecionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFImageCollecionViewController.h; sourceTree = "<group>"; };
+		277F73C519C1365500699C5E /* IFImageCollecionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFImageCollecionViewController.m; sourceTree = "<group>"; };
+		277F73C619C1365500699C5E /* IFImageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFImageCollectionCell.h; sourceTree = "<group>"; };
+		277F73C719C1365500699C5E /* IFImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFImageCollectionCell.m; sourceTree = "<group>"; };
+		277F73C819C1365500699C5E /* IFImageGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFImageGroupsViewController.h; sourceTree = "<group>"; };
+		277F73C919C1365500699C5E /* IFImageGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFImageGroupsViewController.m; sourceTree = "<group>"; };
+		277F73CB19C1365500699C5E /* icon_photo_able@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_photo_able@2x.png"; sourceTree = "<group>"; };
+		277F73CC19C1365500699C5E /* icon_photo_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_photo_add@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +95,7 @@
 		277F738219C135C700699C5E = {
 			isa = PBXGroup;
 			children = (
+				277F73C319C1365500699C5E /* IFImageCollection */,
 				277F739419C135C700699C5E /* MutipleImagePickerDM */,
 				277F73B319C135C700699C5E /* MutipleImagePickerDMTests */,
 				277F738D19C135C700699C5E /* Frameworks */,
@@ -150,6 +164,30 @@
 				277F73B619C135C700699C5E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		277F73C319C1365500699C5E /* IFImageCollection */ = {
+			isa = PBXGroup;
+			children = (
+				277F73C419C1365500699C5E /* IFImageCollecionViewController.h */,
+				277F73C519C1365500699C5E /* IFImageCollecionViewController.m */,
+				277F73C619C1365500699C5E /* IFImageCollectionCell.h */,
+				277F73C719C1365500699C5E /* IFImageCollectionCell.m */,
+				277F73C819C1365500699C5E /* IFImageGroupsViewController.h */,
+				277F73C919C1365500699C5E /* IFImageGroupsViewController.m */,
+				277F73CA19C1365500699C5E /* img */,
+			);
+			name = IFImageCollection;
+			path = MutipleImagePickerDM/IFImageCollection;
+			sourceTree = "<group>";
+		};
+		277F73CA19C1365500699C5E /* img */ = {
+			isa = PBXGroup;
+			children = (
+				277F73CB19C1365500699C5E /* icon_photo_able@2x.png */,
+				277F73CC19C1365500699C5E /* icon_photo_add@2x.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +267,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277F73D019C1365500699C5E /* icon_photo_able@2x.png in Resources */,
+				277F73D119C1365500699C5E /* icon_photo_add@2x.png in Resources */,
 				277F73A719C135C700699C5E /* Images.xcassets in Resources */,
 				277F739919C135C700699C5E /* InfoPlist.strings in Resources */,
 				277F73A219C135C700699C5E /* Main.storyboard in Resources */,
@@ -250,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277F73CD19C1365500699C5E /* IFImageCollecionViewController.m in Sources */,
 				277F739B19C135C700699C5E /* main.m in Sources */,
 				277F73A519C135C700699C5E /* DMViewController.m in Sources */,
+				277F73CF19C1365500699C5E /* IFImageGroupsViewController.m in Sources */,
+				277F73CE19C1365500699C5E /* IFImageCollectionCell.m in Sources */,
 				277F739F19C135C700699C5E /* DMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +423,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MutipleImagePickerDM/MutipleImagePickerDM-Prefix.pch";
 				INFOPLIST_FILE = "MutipleImagePickerDM/MutipleImagePickerDM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +437,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MutipleImagePickerDM/MutipleImagePickerDM-Prefix.pch";
 				INFOPLIST_FILE = "MutipleImagePickerDM/MutipleImagePickerDM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +502,7 @@
 				277F73BF19C135C700699C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		277F73C019C135C700699C5E /* Build configuration list for PBXNativeTarget "MutipleImagePickerDMTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +511,7 @@
 				277F73C219C135C700699C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

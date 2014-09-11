@@ -7,6 +7,7 @@
 //
 
 #import "DMViewController.h"
+#import "IFImageGroupsViewController.h"
 
 @interface DMViewController ()
 
@@ -24,6 +25,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)showListVIew:(id)sender {
+    IFImageGroupsViewController *imgGroup = [[IFImageGroupsViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:imgGroup];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end
