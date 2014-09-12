@@ -71,7 +71,8 @@
     sendBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 78, 8, 70, 34)];
     sendBtn.backgroundColor = RGB(0, 122, 255);
     sendBtn.layer.cornerRadius = 3;
-    sendBtn.titleLabel.textColor = [UIColor whiteColor];
+    [sendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [sendBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     [sendBtn setTitle:@"发送" forState:UIControlStateNormal];
     [sendBtn addTarget:self action:@selector(sendBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     [footerTool addSubview:sendBtn];
