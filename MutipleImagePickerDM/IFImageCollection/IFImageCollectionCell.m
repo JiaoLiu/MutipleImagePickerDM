@@ -44,15 +44,6 @@
     {
         selectedIDC.image = [UIImage imageNamed:@"icon_photo_able"];
     }
-    [self bounceView:selectedIDC];
-}
-
-- (void)bounceView:(UIView *)view
-{
-    view.transform = CGAffineTransformScale(view.transform, 5 / 4.0, 5 / 4.0);
-    [UIView animateWithDuration:0.3 animations:^{
-        view.transform = CGAffineTransformScale(view.transform, 4 / 5.0, 4 / 5.0);
-    }];
 }
 
 @end

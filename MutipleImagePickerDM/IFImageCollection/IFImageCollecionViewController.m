@@ -188,6 +188,8 @@
     NSURL *url = [[mutAssets objectAtIndex:indexPath.row] valueForProperty:ALAssetPropertyAssetURL];
     [selectedAssetUrls addObject:url];
     [self updateSendBtn];
+    IFImageCollectionCell *cell = (IFImageCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [self bounceView:cell.selectedIDC withScale:1.2];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -195,6 +197,16 @@
     NSURL *url = [[mutAssets objectAtIndex:indexPath.row] valueForProperty:ALAssetPropertyAssetURL];
     [selectedAssetUrls removeObject:url];
     [self updateSendBtn];
+    IFImageCollectionCell *cell = (IFImageCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [self bounceView:cell.selectedIDC withScale:1.2];
+}
+
+- (void)bounceView:(UIView *)view withScale:(float)scale
+{
+    view.transform = CGAffineTransformScale(view.transform, scale, scale);
+    [UIView animateWithDuration:0.3 animations:^{
+        view.transform = CGAffineTransformScale(view.transform, 1 / scale, 1 / scale);
+    }];
 }
 
 @end
