@@ -109,7 +109,7 @@
             NSMutableAttributedString *mutStr = [[NSMutableAttributedString alloc] init];
             [mutStr appendAttributedString:[[NSAttributedString alloc] initWithString:[group valueForProperty:ALAssetsGroupPropertyName]]];
             [mutStr appendAttributedString:[[NSAttributedString alloc] initWithString:@"  "]];
-            [mutStr appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"(%d)",group.numberOfAssets] attributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor]}]];
+            [mutStr appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"(%ld)",(long)group.numberOfAssets] attributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor]}]];
             label.attributedText = mutStr;
         }
     }

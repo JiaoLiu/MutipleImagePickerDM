@@ -97,7 +97,7 @@
 - (void)updateSendBtn
 {
     if (selectedAssetUrls.count > 0) {
-        [sendBtn setTitle:[NSString stringWithFormat:@"发送(%d)",selectedAssetUrls.count] forState:UIControlStateNormal];
+        [sendBtn setTitle:[NSString stringWithFormat:@"发送(%lu)",(unsigned long)selectedAssetUrls.count] forState:UIControlStateNormal];
     }
     else
     {
@@ -123,7 +123,7 @@
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"请选择要发送的图片" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"请选择要发送的图片" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
         [alert show];
     }
 }
@@ -176,7 +176,7 @@
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (selectedAssetUrls.count >= maxSelectLimit) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"你最多可以选择%d张照片", maxSelectLimit] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"我知道了", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"你最多可以选择%ld张照片", (long)maxSelectLimit] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"我知道了", nil];
         [alert show];
         return NO;
     }
