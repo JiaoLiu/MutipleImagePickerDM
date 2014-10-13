@@ -92,6 +92,7 @@
             [mutAssets addObject:result];
         };
     }];
+    mutAssets = [NSMutableArray arrayWithArray:[[mutAssets reverseObjectEnumerator] allObjects]];
 }
 
 - (void)updateSendBtn

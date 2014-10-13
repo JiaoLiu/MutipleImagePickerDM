@@ -10,28 +10,30 @@
 
 @implementation IFImageCollectionCell
 
-@synthesize asset;
+@synthesize asset = _asset;
 @synthesize selectedIDC;
+@synthesize photo;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        photo = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
+        photo.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [self.contentView addSubview:photo];
+        
+        selectedIDC = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width - 30, 5, 25, 25)];
+        selectedIDC.image = [UIImage imageNamed:@"icon_photo_able"];
+        [photo addSubview:selectedIDC];
     }
     return self;
 }
 
-- (void)drawRect:(CGRect)rect
+- (void)setAsset:(ALAsset *)asset
 {
-    // Drawing code
-    UIImageView *photo = [[UIImageView alloc] initWithFrame:rect];
+    _asset = asset;
     photo.image = [UIImage imageWithCGImage:[asset thumbnail]];
-    [self.contentView addSubview:photo];
-    
-    selectedIDC = [[UIImageView alloc] initWithFrame:CGRectMake(rect.size.width - 30, 5, 25, 25)];
-    selectedIDC.image = [UIImage imageNamed:@"icon_photo_able"];
-    [photo addSubview:selectedIDC];
 }
 
 - (void)setSelected:(BOOL)selected

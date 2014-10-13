@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong)ALAsset *asset;
 @property (nonatomic, strong)UIImageView *selectedIDC;
+@property (nonatomic, strong)UIImageView *photo;
 
 @end
