@@ -14,6 +14,9 @@
 #define RGB(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 
 @interface IFImageGroupsViewController ()
+{
+    UITableView *table;
+}
 
 @end
 
@@ -28,7 +31,6 @@
         // Custom initialization
         assetsGroups = [[NSMutableArray alloc] init];
         assetsLibrary = [[ALAssetsLibrary alloc] init];
-        [self setAssetsGroups];
     }
     return self;
 }
@@ -42,12 +44,14 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(rightBarButtonClicked)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
-    UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     table.delegate = self;
     table.dataSource = self;
     table.tableFooterView = [UIView new];
     table.rowHeight = 55;
     [self.view addSubview:table];
+    
+    [self setAssetsGroups];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,6 +72,7 @@
             if (group.numberOfAssets > 0) {
                 [assetsGroups addObject:group];
             }
+            [table reloadData];
         } failureBlock:^(NSError *error) {
             NSLog(@"fail to get assetsLib");
         }];
